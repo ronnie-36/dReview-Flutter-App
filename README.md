@@ -1,6 +1,6 @@
-# flutter_application_1
+# dReview
 
-A new Flutter project.
+Flutter app for decentralized Review system
 
 ## Getting Started
 
