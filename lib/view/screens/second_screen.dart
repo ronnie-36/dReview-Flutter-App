@@ -10,53 +10,56 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Terms and Conditions'),),
       body: SafeArea(
           child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child:
-              Padding(
-              padding: EdgeInsets.all(15),
-                child: Text('\nThe digitization of governance refers to the use of digital technologies the efficiency, effectiveness, and transparency of governmental processes. It involves the automation of administrative tasks, the use of online platforms for communication and information sharing, and the integration of digital systems across different government agencies. Digitization has the potential to transform the way governance is conducted by making it more transparent, efficient, and accessible. It can also improve the delivery of public services, reduce the burden of bureaucracy, and enhance the participation of citizens in the decision-making process. In short, the digitization of governance can help to create more responsive, accountable, and inclusive governments that are better able to serve the needs of their citizens.',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                  ),
-                ),
-              )
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => TermsAndCondtionsScreen()));
-            },
-            child: Text('Terms and conditions'),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomButton(
-                  name: 'Accept',
-                  minWidth: MediaQuery.of(context).size.width / 3,
-                  onPressed: () {
-                    openWebsite(context);
-                  }),
-              CustomButton(
-                  name: 'Reject',
-                  minWidth: MediaQuery.of(context).size.width / 3,
-                  onPressed: () {
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) => FirstScreen()),
-                        (route) => false);
-                  })
+              Expanded(
+                  child:
+                  Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Text('1) The purpose of this project is solely for academic grade and research purposes. \n'
+                        '2) The information provided within this application is not guaranteed to be completely secure. Use of this application is at the user\'s own risk. \n'
+                        '3) By accepting these terms and conditions, you acknowledge your interest in participating in a trial of this application.',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+              ),
+              // TextButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) => TermsAndCondtionsScreen()));
+              //   },
+              //   child: Text('Terms and conditions'),
+              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomButton(
+                      name: 'Accept',
+                      minWidth: MediaQuery.of(context).size.width / 3,
+                      onPressed: () {
+                        openWebsite(context);
+                      }),
+                  CustomButton(
+                      name: 'Reject',
+                      minWidth: MediaQuery.of(context).size.width / 3,
+                      onPressed: () {
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(builder: (context) => FirstScreen()),
+                                (route) => false);
+                      })
+                ],
+              )
             ],
-          )
-        ],
-      )),
+          )),
     );
   }
 

@@ -26,15 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text(
-            'Welcome \n to \n Next Gen \n Review System',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue
-            ),
-          ),
+          child: Image.asset('asset/icons/AppIcon.png'),
         ),
       ),
     );
