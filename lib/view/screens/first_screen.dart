@@ -13,11 +13,11 @@ class FirstScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                  child:
-                  Padding(
-                    padding: EdgeInsets.all(15),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
                     child: Center(
-                      child: Text('\nDigital Transformation of Anti-Corruption technologies towards next-gen digital governance',
+                      child: Text(
+                        'Digital Transformation of Anti-Corruption technologies towards next-gen digital governance',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 36,
@@ -26,8 +26,7 @@ class FirstScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
-              ),
+                  )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -35,8 +34,8 @@ class FirstScreen extends StatelessWidget {
                     name: 'Continue',
                     minWidth: MediaQuery.of(context).size.width / 2,
                     onPressed: () {
-                      Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => SecondScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SecondScreen()));
                     },
                   )
                 ],
