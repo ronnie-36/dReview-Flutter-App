@@ -25,16 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        margin: EdgeInsets.all(48),
+        padding: EdgeInsets.all(48),
         child: Center(
-          child: Text(
-            'Welcome \n to \n Next Gen \n Review System',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue
-            ),
-          ),
+          child: Image.asset('asset/icons/AppIcon.png'),
         ),
       ),
     );
